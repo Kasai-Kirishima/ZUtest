@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лето на двоих — визуальная новелла</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand"><span class="sun">☼</span><div><b>ЛЕТО НА ДВОИХ</b><small>История одного лагеря</small></div></div>
+    <div class="hud"><span>◷ <b id="clock">08:00</b></span><span id="dayLabel">День 1</span><button class="icon-btn" id="settingsBtn" title="Настройки">⚙</button><button class="icon-btn" id="relationsBtn" title="Отношения">♡</button></div>
+  </header>
+  <main>
+    <section id="scene" class="scene">
+      <div class="scene-art" id="sceneArt"><div class="sun-glow"></div><div class="hills"></div><div class="trees"></div></div>
+      <div class="scene-shade"></div>
+      <div class="scene-content">
+        <div class="location-tag" id="locationTag">АВТОБУС</div>
+        <h1 id="sceneTitle">Дорога к лету</h1>
+        <div class="dialogue-card">
+          <div class="speaker" id="speaker">Главный герой</div>
+          <p id="dialogue"></p>
+          <div id="choices" class="choices"></div>
+          <div class="dialogue-actions"><button id="nextBtn" class="primary">Далее →</button></div>
+        </div>
+      </div>
+    </section>
+    <section id="campView" class="camp-view hidden">
+      <div class="camp-heading"><div><div class="eyebrow">ЛЕТНИЙ ЛАГЕРЬ «СОСНОВЫЙ БЕРЕГ»</div><h2 id="campTitle">Куда отправимся?</h2><p id="campDescription">Лагерь уже проснулся. Можно осмотреться, поговорить с ребятами или просто провести время.</p></div><div class="weather">☀ <span>Ясно</span></div></div>
+      <div class="camp-layout">
+        <div class="map-card">
+          <div class="map-top"><b>КАРТА ЛАГЕРЯ</b><span>Выберите место</span></div>
+          <div id="map" class="map"></div>
+        </div>
+        <aside class="side-panel">
+          <div class="panel-title">СЕГОДНЯ</div>
+          <div class="statline"><span>День</span><b id="sideDay">1 / 14</b></div>
+          <div class="statline"><span>Время</span><b id="sideTime">08:00</b></div>
+          <div class="statline"><span>Настроение</span><b id="mood">Хорошее</b></div>
+          <hr>
+          <div class="panel-title">БЫСТРЫЕ ДЕЙСТВИЯ</div>
+          <button class="wide-btn" id="peopleBtn">♙ С кем поговорить</button>
+          <button class="wide-btn" id="restBtn">☾ Отдохнуть час</button>
+          <button class="wide-btn" id="journalBtn">▤ Дневник героя</button>
+          <p class="hint">Время движется после событий и разговоров. Не забывай, что лагерь живёт своей жизнью.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer><span>Две недели. Десять мест. Много случайных встреч.</span><span>Демо-версия · 0.1</span></footer>
+</div>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-card"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div>
+</div>
+<script src="game.js"></script>
+</body></html>
